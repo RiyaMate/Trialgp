@@ -323,9 +323,9 @@ import {
   SystemMessagePromptTemplate,
 } from "langchain/prompts";
 import { getSubtitles } from 'youtube-captions-scraper';
-import ResearchAgent from "../../agents/ResearchAgent";
-import extractVideoId from "../../utils/extractVideoId";
-import getVideoMetaData from "../../utils/getVideoMetaData";
+import ResearchAgent from "../../agents/ResearchAgent.js";
+import extractVideoId from "../../utils/extractVideoId.js";
+import getVideoMetaData from "../../utils/getVideoMetaData.js";
 
 // Global Variables
 let chain;

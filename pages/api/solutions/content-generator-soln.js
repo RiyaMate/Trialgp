@@ -1,22 +1,18 @@
 // /pages/api/transcript_chat.js
 
-import { LLMChain } from "langchain/chains";
+/*import { LLMChain } from "langchain/chains";
 import { ChatOpenAI } from "langchain/chat_models/openai";
 import {
   ChatPromptTemplate,
   HumanMessagePromptTemplate,
   SystemMessagePromptTemplate,
 } from "langchain/prompts";
-import { YoutubeTranscript } from "youtube-transcript";
-import ResearchAgent from "../../agents/ResearchAgent";
-import extractVideoId from "../../utils/extractVideoId";
-import getVideoMetaData from "../../utils/getVideoMetaData";
+import { YoutubeTranscript } from "youtube-transcript.js";
+import ResearchAgent from "../../agents/ResearchAgent.js";
+import extractVideoId from "../../utils/extractVideoId.js";
+import getVideoMetaData from "../../utils/getVideoMetaData.js";
 
-/**
- *
- * WARNING: THIS IS THE SOLUTION! Please try coding before viewing this.
- *
- */
+
 
 // Global Variables
 let chain;
@@ -185,3 +181,4 @@ export default async function handler(req, res) {
     }
   }
 }
+*/
