@@ -1,18 +1,21 @@
 "use client";
 
-import React, { useState } from "react";
-import ResultWithSources from "../components/ResultWithSources";
-import PromptBox from "../components/PromptBox";
+import { useState } from "react";
 import Button from "../components/Button";
+import ButtonContainer from "../components/ButtonContainer";
 import PageHeader from "../components/PageHeader";
+import PromptBox from "../components/PromptBox";
+import ResultWithSources from "../components/ResultWithSources";
 import Title from "../components/Title";
 import TwoColumnLayout from "../components/TwoColumnLayout";
-import ButtonContainer from "../components/ButtonContainer";
 import "../globals.css";
 
 const AnyComponentName = () => {
   const [prompt, setPrompt] = useState("");
   const [data, setData] = useState("");
+  const [messages, setMessages] = useState([]);
+  const [error, setError] = useState(null);
+
 
   const handlePromptChange = (e) => {
     setPrompt(e.target.value);
