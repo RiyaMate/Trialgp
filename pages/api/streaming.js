@@ -26,6 +26,7 @@ export default function handler(req, res) {
 
 import { OpenAI } from "langchain/llms/openai";
 import SSE from "express-sse";
+import cors from "cors"; // Import the cors module
 
 /**
  *
@@ -36,6 +37,15 @@ import SSE from "express-sse";
 const sse = new SSE();
 
 export default function handler(req, res) {
+  const corsOptions = {
+    origin: '*', // This will allow all domains to access your API. Be more specific for production environments.
+    methods: ['GET', 'POST', 'OPTIONS'] // Specifying which methods are allowed.
+  };
+
+  if (req.method === 'OPTIONS') {
+    return res.status(200).send(); // Handle preflight for CORS.
+  }
+
   if (req.method === "POST") {
     const { input } = req.body;
 
@@ -71,3 +81,5 @@ export default function handler(req, res) {
   }
 }
 
+// Use CORS with the options
+handler.use(cors(corsOptions));
